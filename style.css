@@ -40,3 +40,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+footer a {
+    color: #ddd; /* Couleur de lien pour le fond #333 */
+    text-decoration: none; /* Pour enlever le soulignement des liens */
+}
+
+footer a:hover {
+    color: #fff; /* Couleur de lien au survol */
+    text-decoration: underline; /* Soulignez le lien au survol */
+}
