@@ -1,14 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+}
+h2 {
+    font-family: 'Roboto', sans-serif; /* Utilisation de la police Roboto pour les balises h2 */
+    font-size: 2rem; /* Taille de police pour les balises h2 */
+    margin-bottom: 1rem; /* Marge en bas des balises h2 */
+    color: #333; /* Couleur du texte pour les balises h2 */
 }
 
+h3 {
+    font-family: 'Roboto', sans-serif; /* Utilisation de la police Roboto pour les balises h3 */
+    font-size: 1 rem; /* Taille de police pour les balises h3 */
+    margin-bottom: 1rem; /* Marge en bas des balises h3 */
+    color: #555; /* Couleur du texte pour les balises h3 */
+}
+.wrapper {
+    flex: 1;
+}
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .portfolio {
@@ -16,37 +32,102 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 2rem;
+    margin-bottom: 3rem;
 }
 
 .project {
-    width: 300px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project img {
     width: 100%;
-    height: auto;
+    max-height: 200px;
+    object-fit: cover; /* Ajuste la taille de l'image pour couvrir le conteneur sans étirement */
+    object-position: center; /* Centre l'image dans le conteneur */
+}
+.img-wrapper{
+    height: 200px;
+    display: flex;
+    align-items: center; /* Centre l'image verticalement */
+    justify-content: center; /* Centre l'image horizontalement */
+}
+
+.project h2 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.project p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project a {
+
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #ff6347;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-
 footer a {
-    color: #ddd; /* Couleur de lien pour le fond #333 */
-    text-decoration: none; /* Pour enlever le soulignement des liens */
+    color: #a9a6a6;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition douce pour la couleur de lien */
 }
 
 footer a:hover {
-    color: #fff; /* Couleur de lien au survol */
-    text-decoration: underline; /* Soulignez le lien au survol */
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #ddd;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff6347;
 }
