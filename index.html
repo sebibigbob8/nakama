@@ -79,7 +79,21 @@
       </div>
       <!--Chatbot-->
       <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-      <script src="https://mediafiles.botpress.cloud/1d96b8df-2bf2-441e-9a19-977eb804ddaa/webchat/config.js" defer></script>
+      <script>
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Nakama Bot",
+            "botConversationDescription": "Ne me prenez pas trop au sérieux, merci.",
+            "botId": "1d96b8df-2bf2-441e-9a19-977eb804ddaa",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "1d96b8df-2bf2-441e-9a19-977eb804ddaa",
+            "lazySocket": true,
+            "frontendVersion": "v1",
+            "showPoweredBy": false,
+            "theme": "prism",
+            "themeColor": "#a9a6a6"
+        });
+      </script>
     </footer>
   </body>
 </html>
